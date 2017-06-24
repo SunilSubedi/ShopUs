@@ -21,8 +21,8 @@ class Product  extends My_controller{
     public function getProduct($category,$sub_category)
     {
         
-        $config['base_url']="http://localhost/ShopUs/product/getProduct/$category/$sub_category";
-        $config['total_rows']=10;
+        $config['base_url']=   base_url()."product/getProduct/$category/$sub_category/";
+        $config['total_rows']=  $this->listproduct->total();
         $config['per_page']=2;
         $config['num_links']=10;
     $config["full_tag_open"] = '<ul class="pagination">';
@@ -47,8 +47,16 @@ $config['num_tag_close'] = '</li>';
         //$config['anchor_class'] = 'class="number"';
         $this->pagination->initialize($config);
             
+        if($this->uri->segment(3)===false)
+        {
+            $offset=0;
+        }
+        else
+        {
+            $offset=$this->uri->segment(3);
+        }
       //  die($sub_category);
-        $result['product']=$this->listproduct->getProduct($sub_category,$config['per_page'],$this->uri->segment(3));
+        $result['product']=$this->listproduct->getProduct($sub_category,$config['per_page'],$offset);
         if($result['product']=="no")
         {
           echo "<script>alert('Not Avilable')</script>";
