@@ -10,7 +10,8 @@ $(document).ready(function(){
    var name=$(this).attr('data-productname');
    if(user_name=="NULL")
    {
-      window.location.href = "admin/user_login";
+       
+      window.location.href = "/ShopUs/user_login";
    }
    else
    {

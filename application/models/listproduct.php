@@ -15,21 +15,25 @@ class Listproduct extends My_model {
     public function __construct() {
         parent::__construct();
     }
-    public function getProduct($data)
+    public function getProduct($data,$limit,$offset)
     {
+        $where = "tbl_products.sub_category_id='$data' limit $limit offset $offset";
         //die($data);
         $this->db->select('*');
             $this->db->from('tbl_products');
             $this->db->join('tbl_sub_category','tbl_products.sub_category_id=tbl_sub_category.sub_category_id');
-            $this->db->where('tbl_products.sub_category_id',$data);
-            
-            $result = $this->db->get();
+            $this->db->where($where);
+                $result = $this->db->get();
             if($result->num_rows()>0)
             {
+                 //print_r($result);
+                //echo"<script>alert('Heloo')";
                  return ($result->result_array());
             }
             else {
-              return "no";
+               /// print_r($result);
+               // die($offset);
+             return "no";
             }
           
             //die('thank u');

@@ -18,7 +18,7 @@ if(!isset($data))
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                 <?php echo form_open('addlist/postsubcategory',array('role'=>'form')) ?>
+                                 <?php echo form_open('backend/addlist/postsubcategory',array('role'=>'form')) ?>
                                     <input type="hidden" name="id" value="<?php echo $data[0]['sub_category_id']?>"/>
                                      <div class="form-group">
                                             <label>Category Name</label>

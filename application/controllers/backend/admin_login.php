@@ -32,7 +32,7 @@ class Admin_login  extends My_controller{
             );
             $this->session->set_userdata($record);
             $this->session->set_flashdata('success','Login Sucessfully');
-            redirect('admin/');
+            redirect('admin/home');
             
         }
        else {

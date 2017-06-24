@@ -16,13 +16,39 @@ class Product  extends My_controller{
         parent::__construct();
         $this->load->model('listproduct');
         $this->load->model('listmodel');
+        $this->load->library('pagination');
     }
     public function getProduct($category,$sub_category)
     {
         
+        $config['base_url']="http://localhost/ShopUs/product/getProduct/$category/$sub_category";
+        $config['total_rows']=10;
+        $config['per_page']=2;
+        $config['num_links']=10;
+    $config["full_tag_open"] = '<ul class="pagination">';
+$config["full_tag_close"] = '</ul>';	
+$config["first_link"] = "&laquo;";
+$config["first_tag_open"] = "<li>";
+$config["first_tag_close"] = "</li>";
+$config["last_link"] = "&raquo;";
+$config["last_tag_open"] = "<li>";
+$config["last_tag_close"] = "</li>";
+$config['next_link'] = '&gt;';
+$config['next_tag_open'] = '<li>';
+$config['next_tag_close'] = '<li>';
+$config['prev_link'] = '&lt;';
+$config['prev_tag_open'] = '<li>';
+$config['prev_tag_close'] = '<li>';
+$config['cur_tag_open'] = '<li class="active"><a href="#">';
+$config['cur_tag_close'] = '</a></li>';
+$config['num_tag_open'] = '<li>';
+$config['num_tag_close'] = '</li>';
+
+        //$config['anchor_class'] = 'class="number"';
+        $this->pagination->initialize($config);
             
       //  die($sub_category);
-        $result['product']=$this->listproduct->getProduct($sub_category);
+        $result['product']=$this->listproduct->getProduct($sub_category,$config['per_page'],$this->uri->segment(3));
         if($result['product']=="no")
         {
           echo "<script>alert('Not Avilable')</script>";

@@ -37,25 +37,25 @@
              <div class="sidebar-collapse">
     <ul class="nav" id="side-menu">
         <li>
-            <a href="<?php echo base_url()?>admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            <a href="<?php echo base_url()?>backend/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
         </li>
         <li>
-            <a href="<?php echo base_url()?>admin/index/list_admin"><i class="fa fa-table fa-fw"></i>List Admin</a>
+            <a href="<?php echo base_url()?>backend/admin/index/list_admin"><i class="fa fa-table fa-fw"></i>List Admin</a>
         </li>
         <li>
-            <a href="<?php echo base_url()?>admin/index/list_category"><i class="fa fa-edit fa-fw"></i> List Category</a>
+            <a href="<?php echo base_url()?>backend/admin/index/list_category"><i class="fa fa-edit fa-fw"></i> List Category</a>
         </li>       
         <li>
-            <a href="<?php echo base_url()?>admin/index/list_sub_category"><i class="fa fa-edit fa-fw"></i> List Sub Category</a>
+            <a href="<?php echo base_url()?>backend/admin/index/list_sub_category"><i class="fa fa-edit fa-fw"></i> List Sub Category</a>
         </li>       
         <li>
-            <a href="<?php echo base_url()?>admin/index/list_product"><i class="fa fa-edit fa-fw"></i> List Products</a>
+            <a href="<?php echo base_url()?>backend/admin/index/list_product"><i class="fa fa-edit fa-fw"></i> List Products</a>
         </li>       
         <li>
-            <a href="<?php echo base_url()?>admin/index/list_order"><i class="fa fa-edit fa-fw"></i>List orders</a>
+            <a href="<?php echo base_url()?>backend/admin/index/list_order"><i class="fa fa-edit fa-fw"></i>List orders</a>
         </li>
           <li>
-            <a href="<?php echo base_url()?>admin/index/list_sales"><i class="fa fa-edit fa-fw"></i>List Sales</a>
+            <a href="<?php echo base_url()?>backend/admin/index/list_sales"><i class="fa fa-edit fa-fw"></i>List Sales</a>
         </li>
             
     </ul>

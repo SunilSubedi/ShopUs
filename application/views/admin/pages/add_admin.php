@@ -15,7 +15,7 @@
         <!-- You only need this form and the form-register.css -->
 
         
-            <?php echo form_open('addlist/postadmin',array('class'=>'form-register','method'=> 'post'))?>
+            <?php echo form_open('backend/addlist/postadmin',array('class'=>'form-register','method'=> 'post'))?>
           <div><?php echo validation_errors()?></div>
           <input type="hidden" name="id" value="<?php echo $data[0]['id']?>">
             <div class="form-register-with-email">

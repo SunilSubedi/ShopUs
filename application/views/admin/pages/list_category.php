@@ -31,8 +31,8 @@
                                         <tr>
                                             <td><?php echo $row['category_id']?></td>
                                             <td><?php echo $row['category_name']?></td>
-                                             <td><a href="<?php echo base_url()?>uplist/categoryUpdate/<?php echo $row['category_id']?>" class="btn btn-primary">Edit</a></td>
-                                            <td><a href="<?php echo base_url()?>adelete/listadmin/list_category/<?php echo $row['category_id']?>" class="btn btn-danger" onclick="return confirm('Do you really want to delete?')">Delete</a></td>
+                                             <td><a href="<?php echo base_url()?>backend/uplist/categoryUpdate/<?php echo $row['category_id']?>" class="btn btn-primary">Edit</a></td>
+                                            <td><a href="<?php echo base_url()?>backend/adelete/listadmin/list_category/<?php echo $row['category_id']?>" class="btn btn-danger" onclick="return confirm('Do you really want to delete?')">Delete</a></td>
                                             
                                             
                                         </tr>

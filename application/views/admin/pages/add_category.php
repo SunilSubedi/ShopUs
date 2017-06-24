@@ -12,7 +12,7 @@
         <!-- You only need this form and the form-register.css -->
 
         
-            <?php echo form_open('addlist/postcategory',array('class'=>'form-register'))?>
+            <?php echo form_open('backend/addlist/postcategory',array('class'=>'form-register'))?>
         <input type="hidden" name="id" value="<?php echo $data[0]['category_id']?>"/>
             <div class="form-register-with-email">
 

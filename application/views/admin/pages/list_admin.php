@@ -43,8 +43,8 @@
                                             <td><?php echo $row['phone']?></td>
                                             <td><?php echo $row['pass']?></td>
                                           
-                                            <td><a href="<?php echo base_url()?>uplist/adminUpdate/<?php echo $row['id']?>" class="btn btn-primary">Edit</a></td>
-                                            <td><a href="<?php echo base_url()?>adelete/listadmin/list_admin/<?php echo $row['id']?>" class="btn btn-danger" onclick="return confirm('Do you really want to delete?')">Delete</a></td>
+                                            <td><a href="<?php echo base_url()?>backend/uplist/adminUpdate/<?php echo $row['id']?>" class="btn btn-primary">Edit</a></td>
+                                            <td><a href="<?php echo base_url()?>backend/adelete/listadmin/list_admin/<?php echo $row['id']?>" class="btn btn-danger" onclick="return confirm('Do you really want to delete?')">Delete</a></td>
                                             
                                             
                                         </tr>

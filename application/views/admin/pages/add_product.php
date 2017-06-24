@@ -9,7 +9,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                 <?php echo form_open_multipart('addlist/postproduct',array('role'=>'form')) ?>
+                                 <?php echo form_open_multipart('backend/addlist/postproduct',array('role'=>'form')) ?>
                                           <div class="form-group">
                                             <label>Product Name</label>
                                             <input class="form-control" type="text" name="product_title">

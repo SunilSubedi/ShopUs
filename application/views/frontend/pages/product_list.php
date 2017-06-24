@@ -69,11 +69,18 @@
               </div>
             </div>
             <!-- BEGIN PRODUCT LIST -->
+          
+                
+         
+                     <?php echo $this->pagination->create_links()?> <br>
+                              
             <div class="row product-list">
+               
               <!-- PRODUCT ITEM START -->
+                
                <?php  foreach($product as $products) { ?>
               <div class="col-md-2 col-xs-6">
-                  
+                
                 <div class="product-item">
                   <div class="pi-img-wrapper">
                       <img src="<?php echo base_url()?>application/upload/<?php echo $products['product_img']?>" class="img-responsive" height="200px" width="200px" alt="Berry Lace Dress">
@@ -97,8 +104,14 @@
                 </div>
                   
               </div>
+            
+             
               <?php } ?>
+             
+             
             </div>
+                
+            
           
             <!-- END PRODUCT LIST -->
             <!-- BEGIN PAGINATOR -->
