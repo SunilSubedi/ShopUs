@@ -45,29 +45,7 @@
             </div>
             </div>
           </div>
-          <!-- END SIDEBAR -->
-          <!-- BEGIN CONTENT -
-          <div class="col-md-9 col-sm-7">
-            <div class="row list-view-sorting clearfix">
-              <div class="col-md-2 col-sm-2 list-view">
-                <a href="javascript:;"><i class="fa fa-th-large"></i></a>
-                <a href="javascript:;"><i class="fa fa-th-list"></i></a>
-              </div>
-              <div class="col-md-10 col-sm-10">
-        
-              <div class="pull-right">
-                  <label class="control-label">Sort&nbsp;By:</label>
-                  <select class="form-control input-sm">
-                    <option value="#?sort=p.sort_order&amp;order=ASC" selected="selected">Default</option>
-                    <option value="#?sort=pd.name&amp;order=ASC">Name (A - Z)</option>
-                    <option value="#?sort=pd.name&amp;order=DESC">Name (Z - A)</option>
-                    <option value="#?sort=p.price&amp;order=ASC">Price (Low &gt; High)</option>
-                    <option value="#?sort=p.price&amp;order=DESC">Price (High &gt; Low)</option>
-                
-                  </select>
-                </div>
-              </div>
-            </div>
+         
             <!-- BEGIN PRODUCT LIST -->
           
                 
@@ -86,7 +64,7 @@
                       <img src="<?php echo base_url()?>application/upload/<?php echo $products['product_img']?>" class="img-responsive" height="200px" width="200px" alt="Berry Lace Dress">
                     <div>
                       <a href="<?php echo base_url()?>/application/upload/<?php echo $products['product_img']?>" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default btn-sm fancybox-fast-view">View</a>
+                      <a href="<?php echo base_url()?>product/<?php echo $products['product_id']?>" class="btn btn-default btn-sm fancybox-fast-view">View</a>
                     </div>
                   </div>
                   <h3><a href="shop-item.html"><?php echo $products['product_title']?></a></h3>

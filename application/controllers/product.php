@@ -79,4 +79,25 @@ $config['num_tag_close'] = '</li>';
         $this->load->view('frontend/template/footer.php');
         
     }
+    public function getsingle($id)
+    {
+        
+        $result['product']=$this->listproduct->getsingle($id);
+         $data['phone'] = 9801446192;
+        $data['category'] = $this->listmodel->listpage('list_category');
+        $data['sub_category'] = $this->listmodel->listpage('list_sub_category');
+      //  if (isset($_SESSION['user_name'])) {
+            // $data['count']=  $this->order->countOrder();
+            // $data['total'] = $this->order->total();
+        //}
+        // print_r($data['category']);
+        // die('thank you');
+        $this->load->view('frontend/template/header.php');
+        $this->load->view('frontend/pageparts/topbar.php', $data);
+        $this->load->view('frontend/pageparts/header.php', $data);
+        $this->load->view('frontend/pages/product-view.php',$result);
+        $this->load->view('frontend/pageparts/prefooter.php');
+        $this->load->view('frontend/template/footer.php');
+         
+    }
 }

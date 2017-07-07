@@ -69,7 +69,7 @@ class Cart  extends My_controller{
                       <td><img src='.base_url().'/application/upload/'.$cont['name'].'></td>
                       <td>'.$cont['qty'].'</td>
                       <td>'. $cont['price'].'</td>
-                      <td><button type="button" class="btn btn-danger dele" data-id='.$cont['id'].'>Delete</button></td>
+                      <td><button type="button" class="btn btn-danger dele" data-id='.$cont['rowid'].'>Delete</button></td>
                        <td>'.$cont['subtotal'].'</td>   
                   </tr>';
         }

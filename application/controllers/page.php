@@ -21,25 +21,25 @@ class Page extends My_controller {
     {
     
         //$this->uri->segment(1,'home');
-        /*$data['phone']=9801446191;
-        $data['category']=$this->listmodel->listpage('list_category');
-        $data['sub_category']=  $this->listmodel->listpage('list_sub_category');
-       // print_r($data['category']);*/
-        $data['phone']=9801446192;
-        $data['category']=$this->listmodel->listpage('list_category');
-        $data['sub_category']=  $this->listmodel->listpage('list_sub_category');
-        if(isset($_SESSION['user_name']))
-        {
-           // $data['count']=  $this->order->countOrder();
-           // $data['total'] = $this->order->total();
+        /* $data['phone']=9801446191;
+          $data['category']=$this->listmodel->listpage('list_category');
+          $data['sub_category']=  $this->listmodel->listpage('list_sub_category');
+          // print_r($data['category']); */
+        $data['phone'] = 9801446192;
+        $data['category'] = $this->listmodel->listpage('list_category');
+        $data['sub_category'] = $this->listmodel->listpage('list_sub_category');
+        if (isset($_SESSION['user_name'])) {
+            // $data['count']=  $this->order->countOrder();
+            // $data['total'] = $this->order->total();
         }
-       // print_r($data['category']);
-       // die('thank you');
+        // print_r($data['category']);
+        // die('thank you');
         $this->load->view('frontend/template/header.php');
-        $this->load->view('frontend/pageparts/topbar.php',$data);
-    $this->load->view('frontend/pageparts/header.php',$data);
-        $this->load->view('frontend/pages/'.$page);
-          $this->load->view('frontend/pageparts/prefooter.php');
+        $this->load->view('frontend/pageparts/topbar.php', $data);
+        $this->load->view('frontend/pageparts/header.php', $data);
+        $this->load->view('frontend/pages/' . $page);
+        $this->load->view('frontend/pageparts/prefooter.php');
         $this->load->view('frontend/template/footer.php');
     }
+
 }

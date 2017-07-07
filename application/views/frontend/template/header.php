@@ -36,24 +36,30 @@
     <!--owl curcosel -->
     <link href="<?php echo base_url()?>/application/assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css">
     <!-- Theme styles START -->
-  <link href="<?php echo base_url()?>/application/assets/pages/css/components.css" rel="stylesheet">
-  <link href="<?php echo base_url()?>/application/assets/pages/css/slider.css" rel="stylesheet">
-  <link href="<?php echo base_url()?>/application/assets/pages/css/style-shop.css" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url()?>/application/assets/corporate/css/style.css" rel="stylesheet">
-  <link href="<?php echo base_url()?>/application/assets/corporate/css/style-responsive.css" rel="stylesheet">
-  <link href="<?php echo base_url()?>/application/assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
-  <link href="<?php echo base_url()?>/application/assets/corporate/css/custom.css" rel="stylesheet">
+  <link href="<?php echo base_url()?>application/assets/pages/css/components.css" rel="stylesheet">
+  <link href="<?php echo base_url()?>application/assets/pages/css/slider.css" rel="stylesheet">
+  <link href="<?php echo base_url()?>application/assets/pages/css/style-shop.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url()?>application/assets/corporate/css/style.css" rel="stylesheet">
+  <link href="<?php echo base_url()?>application/assets/corporate/css/style-responsive.css" rel="stylesheet">
+  <link href="<?php echo base_url()?>application/assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
+  <link href="<?php echo base_url()?>application/assets/corporate/css/custom.css" rel="stylesheet">
   <!-- Theme styles END -->
     <!-- Page-Level Plugin CSS - Dashboard -->
-    <link href="<?php echo base_url()?>/application/assets/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
-    <link href="<?php echo base_url()?>/application/assets/css/plugins/timeline/timeline.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>application/assets/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>application/assets/css/plugins/timeline/timeline.css" rel="stylesheet">
 
     <!-- SB Admin CSS - Include with every page -->
-    <link href="<?php echo base_url()?>/application/assets/css/sb-admin.css" rel="stylesheet">
-    
+    <link href="<?php echo base_url()?>application/assets/css/sb-admin.css" rel="stylesheet">
+     <link href="<?php echo base_url()?>application/assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>application/assets/css/jquery-ui.css" rel="stylesheet">
+     <link href="<?php echo base_url()?>application/assets/css/jquery.countdown.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?php echo base_url()?>application/assets/css/flexslider.css" type="text/css" media="screen" />
+
     <!--Own CSS -->
-    <link href="<?php echo base_url()?>/application/assets/css/form-register.css" rel="stylesheet" type="text/css"/>
- 
+    <link href="<?php echo base_url()?>application/assets/css/form-register.css" rel="stylesheet" type="text/css"/>
+   <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 </head>
 <body class="ecommerce">
 

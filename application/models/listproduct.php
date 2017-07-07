@@ -53,4 +53,9 @@ class Listproduct extends My_model {
         $result = $this->db->get('tbl_products');
         return $result->num_rows();
     }
+    public function getsingle($id)
+    {
+        $result = $this->db->get_where('tbl_products',array('product_id'=>$id));
+        return $result->row();
+    }
 }
