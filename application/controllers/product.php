@@ -17,51 +17,23 @@ class Product  extends My_controller{
         $this->load->model('listproduct');
         $this->load->model('listmodel');
         $this->load->library('pagination');
+        $this->load->model('order');
     }
     public function getProduct($category,$sub_category)
     {
         
-        $config['base_url']=   base_url()."product/getProduct/$category/$sub_category/";
-        $config['total_rows']=  $this->listproduct->total();
-        $config['per_page']=2;
-        $config['num_links']=10;
-    $config["full_tag_open"] = '<ul class="pagination">';
-$config["full_tag_close"] = '</ul>';	
-$config["first_link"] = "&laquo;";
-$config["first_tag_open"] = "<li>";
-$config["first_tag_close"] = "</li>";
-$config["last_link"] = "&raquo;";
-$config["last_tag_open"] = "<li>";
-$config["last_tag_close"] = "</li>";
-$config['next_link'] = '&gt;';
-$config['next_tag_open'] = '<li>';
-$config['next_tag_close'] = '<li>';
-$config['prev_link'] = '&lt;';
-$config['prev_tag_open'] = '<li>';
-$config['prev_tag_close'] = '<li>';
-$config['cur_tag_open'] = '<li class="active"><a href="#">';
-$config['cur_tag_close'] = '</a></li>';
-$config['num_tag_open'] = '<li>';
-$config['num_tag_close'] = '</li>';
+        
 
         //$config['anchor_class'] = 'class="number"';
-        $this->pagination->initialize($config);
-            
-        if($this->uri->segment(3)===false)
-        {
-            $offset=0;
-        }
-        else
-        {
-            $offset=$this->uri->segment(3);
-        }
+     
       //  die($sub_category);
-        $result['product']=$this->listproduct->getProduct($sub_category,$config['per_page'],$offset);
+        $result['product']=$this->listproduct->getProduct($sub_category,$category);
         if($result['product']=="no")
         {
           echo "<script>alert('Not Avilable')</script>";
           redirect('/home');
         }
+        
         
         $result['category']=  $this->listproduct->getCategory($category);
      
@@ -99,5 +71,26 @@ $config['num_tag_close'] = '</li>';
         $this->load->view('frontend/pageparts/prefooter.php');
         $this->load->view('frontend/template/footer.php');
          
+    }
+    
+    public function payment()
+    {
+        $order['user_id'] = $_SESSION['user_id'];
+        foreach ( $this->cart->contents() as $items)
+        {
+            $order['product_id']=$items['id'];
+            $order['quantity']=$items['qty'];
+            $order['price']=$items['price'];
+            $order['status']='active';
+            $result = $this->order->makeOrder($order);
+        }
+       if($result==true)
+       {
+           $this->cart->destroy();
+          // $this->flash->set_flashdata('success','Thank you for the transcation');
+           redirect('/success');
+           
+       }
+        
     }
 }

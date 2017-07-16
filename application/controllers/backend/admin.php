@@ -54,6 +54,7 @@ class Admin extends My_controller {
              {
                 
                  $result['sub_category']=  $this->listmodel->getcontent('tbl_sub_category');
+                 $result['category'] =$this->listmodel->getcontent('tbl_category');
                   $this->load->view('admin/pages/'.$page,$result);
              }
              else {

@@ -15,6 +15,7 @@ class Addmodel extends My_model {
     public function __construct() {
         parent::__construct();
         $this->load->database();
+        
     }
     public function addAdmin()
     {
@@ -85,10 +86,20 @@ class Addmodel extends My_model {
             'product_disc'=> $this->input->post('product_disc'),
             'product_size'=> $this->input->post('product_size'),
             'product_price'=> $this->input->post('product_price'),
-            'status'=>$this->input->post('status')
-            
+            'status'=>$this->input->post('status'),
+            'category_id'=> $this->input->post('category_id'),
         );
+        if($this->input->post('id')==NULL)
+        {
         $this->db->insert('tbl_products',$data);
         return true;
+        }
+        else
+        {    
+            //die('hello');
+            $this->db->where('product_id',$this->input->post('id'));
+            $this->db->update('tbl_products',$data);
+            return true;
+        }
     }
 }

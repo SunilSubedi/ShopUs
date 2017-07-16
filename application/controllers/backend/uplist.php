@@ -39,11 +39,17 @@ class Uplist extends My_controller {
     }
     public function subcategoryUpdate($id)
     {
-            $result['data']= $this->listmodel->getPage('tbl_sub_category',$id,'category_id');
+        //die('hello');
+            $result['data']= $this->listmodel->getPage('tbl_sub_category',$id,'sub_category_id');
        //print_r($result);
        //die('hello');
         $this->addpage('add_sub_category', $result['data']);
           
+    }
+    public function productUpdate($id)
+    {
+        $result['data']=$this->listmodel->getPage('tbl_products',$id,'product_id');
+        $this->addpage('edit_product',$result['data']);
     }
 
     public function addpage($page,$data=NULL)
@@ -56,10 +62,11 @@ class Uplist extends My_controller {
                  $result['category'] =$this->listmodel->getcontent('tbl_category');
                   $this->load->view('admin/pages/'.$page,$result);
              }
-             else if($page=='add_product')
+             else if($page=='edit_product')
              {
                 
                  $result['sub_category']=  $this->listmodel->getcontent('tbl_sub_category');
+                  $result['category'] =$this->listmodel->getcontent('tbl_category');
                   $this->load->view('admin/pages/'.$page,$result);
              }
              else {

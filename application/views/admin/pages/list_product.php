@@ -46,7 +46,7 @@
                                             <td><?php echo $row['product_size']?></td>
                                             <td><?php echo $row['product_price']?></td>
                                             <td><?php echo $row['status']?></td>
-                                             <td><a href="<?php echo base_url()?>backend/aedit/listadmin/list_product" class="btn btn-primary">Edit</a></td>
+                                             <td><a href="<?php echo base_url()?>backend/uplist/productUpdate/<?php echo $row['product_id']?>" class="btn btn-primary">Edit</a></td>
                                             <td><a href="<?php echo base_url()?>backend/adelete/listadmin/list_product/<?php echo $row['product_id']?>" class="btn btn-danger" onclick="return confirm('Do you really want to delete?')">Delete</a></td>
                                             
                                             

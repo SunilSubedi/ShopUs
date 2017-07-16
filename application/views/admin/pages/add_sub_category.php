@@ -5,7 +5,7 @@ if(!isset($data))
     $data[0]['category_id']=NULL;
     $data[0]['sub_category_name']=NULL;
 }
-
+//print_r($data);die('hello');
 ?>
 <!-- /.row -->
             <div class="row">
@@ -27,7 +27,9 @@ if(!isset($data))
                                                     if($cat['category_id']==$data[0]['category_id'])
                                                     { ?>
                                                 <option value="<?php echo $cat['category_id']?>" selected><?php echo $cat['category_name']?></option>
-                                                    <?php }  else { ?>
+                                                    <?php }  
+                                                    else 
+                                                        { ?>
                                                     
                                                 
                                                 <option value="<?php echo $cat['category_id']?>"><?php echo $cat['category_name']?></option>
@@ -36,7 +38,7 @@ if(!isset($data))
                                         </div>
                                         <div class="form-group">
                                             <label>Sub Category Name</label>
-                                            <input class="form-control" type="text" name="sub_category_name" value="<?php echo $data[0]['sub_category_name']?>">
+                                            <input class="form-control" type="text" required name="sub_category_name" value="<?php echo $data[0]['sub_category_name']?>">
                                             
                                         </div>
                                        

@@ -62,13 +62,17 @@ class Listmodel extends My_model {
         $result = $this->db->get($table);
         return $result->result_array();
     }
-    public function getPage($table,$id,$idname)
+    public function getPage($table,$id,$idname)         
     {
+       // die($idname);
+        
         $data= array(
             $idname=>$id,
         );
-     $result = $this->db->get_where($table,$data);
-     return $result->result_array();
+      $result = $this->db->get_where($table,$data);
+      //print_r($result); exit(0);
+      return  $result->result_array();
+    
         
     }
 

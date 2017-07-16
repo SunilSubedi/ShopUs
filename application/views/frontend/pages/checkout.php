@@ -21,7 +21,7 @@ redirect('/user_login');
                       <td><img src="<?php echo base_url().'/application/upload/'?><?php echo $cont['name']?>" height="200px" width="200px"/></td>
                       <td><?php echo $cont['qty']?></td>
                       <td><?php echo $cont['price']?></td>
-                      <td><button type="button" class="btn btn-danger dele" data-id='<?php echo $cont['id']?>'>Delete</button></td>
+                      <td><button type="button" class="btn btn-danger dele" data-id='<?php echo $cont['rowid']?>'>Delete</button></td>
                        <td><?php echo $cont['subtotal']?></td>   
                   </tr>
        <?php   }?>

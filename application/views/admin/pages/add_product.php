@@ -12,7 +12,7 @@
                                  <?php echo form_open_multipart('backend/addlist/postproduct',array('role'=>'form')) ?>
                                           <div class="form-group">
                                             <label>Product Name</label>
-                                            <input class="form-control" type="text" name="product_title">
+                                            <input class="form-control" type="text" name="product_title" required>
                                             
                                         </div>
                                        <div class="form-group">
@@ -26,13 +26,16 @@
                                            <div class="form-group">
                                             <label>For</label>
                                             <select class="form-control" name="category_id">
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
+                                                <?php foreach ($category as $cate) : ?>
+                                   
+                                                <option value="<?php echo $cate['category_id']?>"><?php echo $cate['category_name']?></option>
+                                                
+                                                <?php endforeach; ?>
                                             </select>
                                         </div>
                                             <div class="form-group">
                                             <label>Product Description</label>
-                                            <textarea class="form-control" name="product_disc">
+                                            <textarea class="form-control ckeditor" name="product_disc" required>
                                                 
 
                                             </textarea>
@@ -49,13 +52,13 @@
                                         </div>
                                     <div class="form-group">
                                         <label>Product Price</label>
-                                        <input type="text" name="product_price" class="form-control"/>
+                                        <input type="text" name="product_price" class="form-control" pattern="\d{5}" required/>
                                     </div>
                                     
                                   
                                         <div class="form-group">
                                           <label>File input</label>
-                                          <input type="file" name="file_name">
+                                          <input type="file" name="file_name" required>
                                             
                                         </div>
                                     

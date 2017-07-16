@@ -40,6 +40,7 @@
           $record = array(
             'full_name'=>$data['record']->full_name,
              'user_name'=>$data['record']->user_name,
+              'user_id'=>$data['record']->user_id,
              
           );
           $this->session->set_userdata($record);

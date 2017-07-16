@@ -50,7 +50,7 @@
           
                 
          
-                     <?php echo $this->pagination->create_links()?> <br>
+                     
                               
             <div class="row product-list">
                

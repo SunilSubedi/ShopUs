@@ -15,9 +15,9 @@ class Listproduct extends My_model {
     public function __construct() {
         parent::__construct();
     }
-    public function getProduct($data,$limit,$offset)
+    public function getProduct($data,$category_id)
     {
-        $offset-=1;
+        
        // $offset-=1;
         //$where = "='$data' limit $limit offset $offset";
         //die($data);
@@ -25,7 +25,7 @@ class Listproduct extends My_model {
             $this->db->from('tbl_products');
             $this->db->join('tbl_sub_category','tbl_products.sub_category_id=tbl_sub_category.sub_category_id');
             $this->db->where("tbl_products.sub_category_id",$data);
-            $this->db->limit($limit,$offset);
+            $this->db->where("tbl_products.category_id",$category_id);
                 $result = $this->db->get();
             if($result->num_rows()>0)
             {

@@ -32,5 +32,10 @@ class Order extends My_model {
          }
         
     }
+    public function makeOrder($order)
+    {
+        $this->db->insert('tbl_order',$order);
+        return 1;
+    }
 
 }

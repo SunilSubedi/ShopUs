@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['check/(:any)']='check/$1';
 $route['cart/(:any)']='carts/cart/$1';
+$route['product/payment']='product/payment';
 $route['product/(:any)']='product/getsingle/$1';
 $route['user_login/(:any)']='user_login/$1';
 $route['login']='backend/admin_login/index';

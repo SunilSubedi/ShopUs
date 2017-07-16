@@ -66,10 +66,12 @@
             <!-- /.navbar-static-side -->
         </nav>
        <div id="page-wrapper">
+           <div  style="margin-top: 50px">
            <?php if($this->session->flashdata('success'))
            { ?>
            <div class="row">
                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                <div class="alert alert-success"><?php echo $this->session->flashdata('success')?></div>
+           </div>
            </div>
            <?php } ?>
