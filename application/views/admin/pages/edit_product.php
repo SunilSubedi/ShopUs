@@ -56,13 +56,17 @@
                                         </div>
                                     <div class="form-group">
                                         <label>Product Price</label>
-                                        <input type="text" name="product_price" value="<?php echo $product['product_price']?>" class="form-control" pattern="\d{5}" required/>
+                                        <input type="text" name="product_price" value="<?php echo $product['product_price']?>" class="form-control" pattern="\d{3}+" required/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label>Product Quantity</label>
+                                        <input type="text" name="quantity" class="form-control" value="<?php echo $product['quantity']?>" pattern="\d{2}" required/>
                                     </div>
                                     
                                   
                                         <div class="form-group">
                                           <label>File input</label>
-                                          <input type="file" name="file_name" required <?php echo $product['product_img']?>">
+                                          <input type="file" name="file_name"   value="<?php echo $product['product_img']?>">
                                             
                                         </div>
                                     

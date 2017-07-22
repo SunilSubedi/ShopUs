@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 
 */
+$route['makeorder/(:any)/(:any)']='oders/index/$1/$2';
 $route['check/(:any)']='check/$1';
 $route['cart/(:any)']='carts/cart/$1';
 $route['product/payment']='product/payment';

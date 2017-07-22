@@ -26,6 +26,7 @@ class Listproduct extends My_model {
             $this->db->join('tbl_sub_category','tbl_products.sub_category_id=tbl_sub_category.sub_category_id');
             $this->db->where("tbl_products.sub_category_id",$data);
             $this->db->where("tbl_products.category_id",$category_id);
+            $this->db->where("status","active");
                 $result = $this->db->get();
             if($result->num_rows()>0)
             {
@@ -57,5 +58,32 @@ class Listproduct extends My_model {
     {
         $result = $this->db->get_where('tbl_products',array('product_id'=>$id));
         return $result->row();
+    }
+    public function get_newProduct()
+    {
+        $this->db->order_by('product_id',"desc");
+        $this->db->limit(5);
+        $result = $this->db->get_where('tbl_products',array('status'=>'active'));
+         return $result->result_array();
+         //die('heello');
+        
+    }
+    public function get_threeProduct($limit)
+    {
+        $this->db->limit($limit);
+        $result = $this->db->get_where('tbl_products',array('status'=>'active'));
+         return $result->result_array();
+        
+         
+    }
+    public function getImage()
+    {
+        $this->db->select('product_img');
+        $this->db->from('tbl_products');
+        $this->db->order_by('product_id',"desc");
+        $this->db->limit(4);
+        $result = $this->db->get();
+        return $result->result_array();
+        
     }
 }

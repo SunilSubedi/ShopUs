@@ -37,5 +37,6 @@ class Check  extends My_controller{
        $result=$this->db->get_where('tbl_user',$data);
        return $result->num_rows();
     }
+   
     //put your code here
 }

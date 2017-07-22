@@ -6,6 +6,9 @@ $(document).ready(function(){
    var  title = $(this).attr('data-productTitle');
    var  id = $(this).attr('data-productId');
    var price =$(this).attr('data-productPrice');
+   var total = parseInt($(this).attr('data-quantity'));
+   //alert(total);
+   
   
    var name=$(this).attr('data-productname');
    if(user_name=="NULL")
@@ -15,12 +18,12 @@ $(document).ready(function(){
    }
    else
    {
-        var quantity=parseInt(prompt("Enter a quantity?"));
+       var quantity=parseInt(prompt("Enter a quantity?"));
    $.ajax({
       
       url:'/ShopUs/cart/index',
       type:"POST",
-      data:{id:id,title:title,price:price,quantity:quantity,name:name},
+      data:{id:id,title:title,price:price,quantity:quantity,name:name,total_qty:total},
       success:function(data)
       {
           $('#cartAdd').html(data);
@@ -30,7 +33,7 @@ $(document).ready(function(){
       {
           alert(data);
       }
-      
+    
       
    });
    }

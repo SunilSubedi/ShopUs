@@ -76,9 +76,10 @@
                   }
                   else {
                       $user_name=$_SESSION['user_name'];
+                     // var_dump($products);exit();
                   }
                   ?>
-                  <button type="button" data-user-name="<?php echo $user_name?>" data-productId="<?php echo $products['product_id']?>" data-productPrice="<?php echo $products['product_price']?>" data-productname="<?php echo $products['product_img']?>" data-productTitle="<?php echo $products['product_title']?>" class="btn btn-default btn-sm add2cart addCart">Add to cart</button>
+                  <button type="button" data-user-name="<?php echo $user_name?>" data-quantity="<?php echo $products['quantity']?>" data-productId="<?php echo $products['product_id']?>" data-productPrice="<?php echo $products['product_price']?>" data-productname="<?php echo $products['product_img']?>" data-productTitle="<?php echo $products['product_title']?>" class="btn btn-default btn-sm add2cart addCart">Add to cart</button>
                 </div>
                   
               </div>

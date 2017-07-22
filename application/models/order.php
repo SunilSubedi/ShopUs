@@ -32,10 +32,45 @@ class Order extends My_model {
          }
         
     }
-    public function makeOrder($order)
+    public function makeOrder($id,$receipt)
     {
-        $this->db->insert('tbl_order',$order);
-        return 1;
+        //die($receipt);
+          foreach ($this->cart->contents() as $cont) {
+           $data = array(
+               'product_id'=>$cont['id'],
+               'user_id'=>$id,
+               'price' =>$cont['price'],
+               'quantity'=>$cont['qty'],
+               'receipt'=>$receipt,
+               );
+            $result =$this->getProduct($data['product_id']);
+            $sub = $result->quantity-$data['quantity'];
+            $this->db->insert('tbl_order',$data);
+            $prod = array(
+                'category_id'=> $result->category_id,
+                'sub_category_id' => $result->sub_category_id,
+                'product_img' => $result->product_img,
+                'product_title'=> $result->product_title,
+                'product_disc'=>$result->product_disc,
+                'product_size'=>$result->product_size,
+                'product_price'=>$result->product_price,
+                'quantity'=>$sub
+                
+            );
+            $this->db->where('product_id',$result->product_id);
+            $this->db->update('tbl_products',$prod);
+            
+                
+                        
+                
+         }
+         return true;
+               
+    }
+    public function getProduct($id)
+    {
+        $result =$this->db->get_where('tbl_products',array('product_id'=>$id));
+        return $result->row();
     }
 
 }

@@ -21,7 +21,7 @@
           <div class="col-md-4 steps-block-col wow fadeInLeft" data-wow-delay="3s">
             <i class="fa fa-phone"></i>
             <div>
-              <h2>477 505 8877</h2>
+              <h2></h2>
               <em>24/7 customer care available</em>
             </div>
           </div>

@@ -10,14 +10,13 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="<?php echo base_url()?>/application/assets/pages/img/index-sliders/slide1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="<?php echo base_url()?>/application/upload/<?php echo $content_slider[2]['product_img']?>" style="height: 400px" class="img-responsive" alt="Berry Lace Dress">
                   </div>
+                    <?php foreach ($content_slider as $slide) { ?>
                   <div class="item">
-                    <img src="<?php echo base_url()?>/application/assets/pages/img/index-sliders/slide2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="<?php echo base_url()?>/application/upload/<?php echo $slide['product_img']?>" style="height: 400px" class="img-responsive" alt="Berry Lace Dress">
                   </div>
-                  <div class="item">
-                    <img src="<?php echo base_url()?>/application/assets/pages/img/index-sliders/slide3.jpg" class="img-responsive" alt="Berry Lace Dress">
-                  </div>
+                    <?php } ?>
                 </div>
               </div>
             </div>

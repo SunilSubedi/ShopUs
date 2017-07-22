@@ -88,6 +88,7 @@ class Addmodel extends My_model {
             'product_price'=> $this->input->post('product_price'),
             'status'=>$this->input->post('status'),
             'category_id'=> $this->input->post('category_id'),
+            'quantity'=>  $this->input->post('quantity'),
         );
         if($this->input->post('id')==NULL)
         {

@@ -75,6 +75,7 @@ class Listmodel extends My_model {
     
         
     }
+    
 
     private function tableName($page)
     {

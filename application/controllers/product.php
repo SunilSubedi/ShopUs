@@ -17,7 +17,7 @@ class Product  extends My_controller{
         $this->load->model('listproduct');
         $this->load->model('listmodel');
         $this->load->library('pagination');
-        $this->load->model('order');
+       
     }
     public function getProduct($category,$sub_category)
     {

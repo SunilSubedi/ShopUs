@@ -21,7 +21,7 @@
         <div class="top-cart-block">
           <div class="top-cart-info">
             <a href="javascript:void(0);" class="top-cart-info-count"> <?php echo $order['count']?> Items</a>
-            <a href="javascript:void(0);" class="top-cart-info-value">$<?php echo $order['price']?></a>
+            <a href="javascript:void(0);" class="top-cart-info-value">Rs <?php echo $order['price']?></a>
           </div>
           <i class="fa fa-shopping-cart"></i>          
         </div>

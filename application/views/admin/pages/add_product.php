@@ -52,7 +52,11 @@
                                         </div>
                                     <div class="form-group">
                                         <label>Product Price</label>
-                                        <input type="text" name="product_price" class="form-control" pattern="\d{5}" required/>
+                                        <input type="text" name="product_price" class="form-control" pattern="\d{3}+" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Quantity</label>
+                                        <input type="text" name="quantity" class="form-control" pattern="\d{2}" required/>
                                     </div>
                                     
                                   
@@ -90,10 +94,4 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-                    <!-- <div class="form-group">
-                                            <label>Static Control</label>
-                                            <p class="form-control-static">email@example.com</p>
-                                        </div>
-                                            <label>File input</label>
-                                            <input type="file">
-                                        </div>-->
+                    

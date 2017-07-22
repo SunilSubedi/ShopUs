@@ -19,6 +19,13 @@ class Cart  extends My_controller{
     public function index()
     {
      // die('hello too');
+       // die($_POST['total_qty']);
+        if($_POST['quantity']>$_POST['total_qty'])
+        {
+            echo "<h2>Sorry no of quantity is not avilable. We have ".$_POST['total_qty']." avilable. </h2>";
+        }
+        else
+        {
         $data=array(
             'name'=>$_POST['name'],
             'id'=>$_POST['id'],
@@ -27,6 +34,7 @@ class Cart  extends My_controller{
         );
         $this->cart->insert($data);
        echo  $this->view();
+        }
     }
     public function load()
     {
