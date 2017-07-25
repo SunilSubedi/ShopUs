@@ -8,9 +8,8 @@
                         <li><i class="fa fa-phone"></i><span><?php echo $phone ?></span></li>
                         <!-- BEGIN CURRENCIES -->
                         <li class="shop-currencies">
-                            <a href="javascript:void(0);">€</a>
-                            <a href="javascript:void(0);">£</a>
-                            <a href="javascript:void(0);" class="current">$</a>
+                            <a href="javascript:void(0);">Rs</a>
+                        
                         </li>
                         <!-- END CURRENCIES -->
                         <!-- BEGIN LANGS -->
@@ -42,12 +41,16 @@
                         ?>
                         
                         </li>
-                        <li><a href="<?php echo base_url()?>checkout">Checkout</a></li>
+                        
+                        
                         <?php 
                         if(isset($_SESSION['user_name']))
                         {
-                            $option = 'user_login/logOut';
-                        }
+                            
+                            $option = 'user_login/logOut'; ?>
+                        <li><a href="<?php echo base_url()?>view_order">Orders</a></li>
+                        <li><a href="<?php echo base_url()?>checkout">Checkout</a></li>
+                        <?php }
                         else
                         {
                             $option = 'user_login';

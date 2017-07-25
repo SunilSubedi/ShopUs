@@ -19,7 +19,9 @@ class Listmodel extends My_model {
     }
     public function listpage($page)
     {
+        //  die($page);
         $this->tableName($page);
+       //die($this->table);
         if($this->table=='tbl_sub_category')
         {
             $this->db->select('*');
@@ -40,9 +42,24 @@ class Listmodel extends My_model {
            // die('thank you');
             
         }
+        else if($this->table=='tbl_order')
+        {     //die($page);
+            //die('hekko');
+            $result=$this->db->get($this->table);
+            return $result->result_array();
+            
+        }
+        else if($this->table=='tbl_user')
+        {
+          //  die('helli');
+            $result=$this->db->get($this->table);
+            return $result->result_array();
+        }
+           
         
         else
         {
+           
              $result = $this->db->get($this->table);
           return $result->result_array();
         }
@@ -79,6 +96,7 @@ class Listmodel extends My_model {
 
     private function tableName($page)
     {
+          //die($page);
          switch ($page)
         {
             case 'list_admin':
@@ -96,6 +114,14 @@ class Listmodel extends My_model {
             case 'list_product':
                 $this->table='tbl_products';
                 $this->id='product_id';
+                break;
+            case 'list_user':
+                $this->table='tbl_user';
+                $this->id='user_id';
+                break;
+            case 'list_order':
+                $this->table='tbl_order';
+                $this->id='order_id';
                 break;
             default:
                 $this->table=NULL;

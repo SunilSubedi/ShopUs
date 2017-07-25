@@ -4,6 +4,12 @@ redirect('/user_login');
 }
 ?>
 <div class="jumbotron"><table class="table table-striped small">
+        <?php
+        if($this->cart->contents()==NULL)
+        {
+            echo '<h1 align="center">Empty Cart</h1>';
+        }
+        else { ?>
         <?php $count=0; ?>
                 .  <tr>
                       <th>Id</th>
@@ -27,12 +33,8 @@ redirect('/user_login');
        <?php   }?>
                   <tr><td colspan="2" align="center"><h4> All Total:- <small>Rs</small> <?php echo $this->cart->total()?></h4></td><td>
                           <a href="<?php echo base_url()?>payment" class="btn btn-info">Processed</a></td><tr>;
-        <?php
-        if($count==0)
-        {
-            echo '<h1 align="center">Empty Cart</h1>';
-        }
-        ?>
+        
     </table>
+        <?php } ?>
         
 </div>

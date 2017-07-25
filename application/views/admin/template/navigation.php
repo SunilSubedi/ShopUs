@@ -50,13 +50,14 @@
         </li>       
         <li>
             <a href="<?php echo base_url()?>backend/admin/index/list_product"><i class="fa fa-edit fa-fw"></i> List Products</a>
-        </li>       
+        </li>   
+         <li>
+            <a href="<?php echo base_url()?>backend/admin/index/list_user"><i class="fa fa-edit fa-fw"></i>List User</a>
+        </li>
         <li>
             <a href="<?php echo base_url()?>backend/admin/index/list_order"><i class="fa fa-edit fa-fw"></i>List orders</a>
         </li>
-          <li>
-            <a href="<?php echo base_url()?>backend/admin/index/list_sales"><i class="fa fa-edit fa-fw"></i>List Sales</a>
-        </li>
+         
             
     </ul>
     <!-- /#side-menu -->

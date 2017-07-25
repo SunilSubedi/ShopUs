@@ -40,6 +40,11 @@ class Page extends My_controller {
             $product['product_two']=  $this->listproduct->get_threeProduct(2);
             $product['content_slider'] = $this->listproduct->getImage();
         }
+        else if($page==='view_order')
+        {
+              $id=$this->session->user_id;
+         $product['order']=$this->order->getOrder($id);
+        }
         else {
             $product['product_new']=null;
         }
